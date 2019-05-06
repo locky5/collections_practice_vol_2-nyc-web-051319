@@ -77,8 +77,8 @@ end
 def organize_schools(schools)
   school_hash = {}
   
-  schools.values.each do |location|
-    school_hash[location.values[0]] = [] # place -> key, value -> []
+  schools.values.each do |location| # takes values of school hash...
+    school_hash[location.values[0]] = [] # first location index -> key, value -> []
   end
   schools.each do |school, location|
     school_hash[location.values[0]] << school # puts school per location

@@ -75,6 +75,8 @@ def find_cool(cool)
 end
 
 def organize_schools(schools)
+  school_hash = {}
+  
   schools.values.each do |location|
     school_hash[location.values[0]] = []
   end

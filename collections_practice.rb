@@ -75,4 +75,13 @@ def find_cool(cool)
 end
 
 def organize_schools(schools)
+  schools.values.each do |location|
+    school_hash[location.values[0]] = []
+  end
+  schools.each do |school, location|
+    school_hash[location.values[0]] << school
+  end
+
+  school_hash
+end
 end

@@ -78,10 +78,10 @@ def organize_schools(schools)
   school_hash = {}
   
   schools.values.each do |location|
-    school_hash[location.values[0]] = [] # takes each place and sets
+    school_hash[location.values[0]] = [] # place -> key, value -> []
   end
   schools.each do |school, location|
-    school_hash[location.values[0]] << school
+    school_hash[location.values[0]] << school # puts school per location
   end
 
   school_hash
